@@ -1,5 +1,12 @@
 # TinyURL: URL Shortener Service
 
+## Demo
+
+
+https://github.com/user-attachments/assets/f029d67a-06a9-4248-a517-57dadf3d8d05
+
+
+
 ## Description
 TinyURL is a simple URL shortener service that allows users to convert long URLs into shorter, more manageable links. It uses SQLite as a database to store and retrieve URL mappings.
 
