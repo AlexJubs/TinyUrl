@@ -1,11 +1,12 @@
 # TinyURL: URL Shortener Service
 
 ## Description
-TinyURL is a simple URL shortener service that allows users to convert long URLs into shorter, more manageable links.
+TinyURL is a simple URL shortener service that allows users to convert long URLs into shorter, more manageable links. It uses SQLite as a database to store and retrieve URL mappings.
 
 ## Features
 - Shorten long URLs
 - Redirect users from short URLs to original long URLs
+- Persistent storage of URL mappings using SQLite
 
 ## Installation
 1. Clone the repository
@@ -15,24 +16,22 @@ TinyURL is a simple URL shortener service that allows users to convert long URLs
    ```
 
 ## Usage
-1. Run the application:
+1. Initialize the database (this will be done automatically when you run the app for the first time)
+2. Run the application:
    ```
    poetry run python main.py
    ```
-2. Access the service through your web browser at `http://localhost:5000`
+3. Access the service through your web browser at `http://localhost:5000`
+
+## API Endpoints
+- POST `/shorten`: Shorten a long URL
+  - Request body: `{"url": "https://example.com/very/long/url"}`
+  - Response: Short URL
+- GET `/<short_url>`: Redirect to the original long URL
 
 ## Technologies Used
 - Python
 - Flask
+- Flask-SQLAlchemy
+- SQLite
 - Poetry (for dependency management)
-
-## Contributing
-Contributions are welcome. Please fork the repository and submit a pull request with your changes.
-
-## License
-[MIT License](LICENSE)
-
-## Contact
-Alex Jabbour - redpod22@gmail.com
-
-Project Link: [https://github.com/yourusername/tinyurl](https://github.com/yourusername/tinyurl)
